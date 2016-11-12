@@ -1,0 +1,11 @@
+{% if rolik %}
+<p>Name: {{ rolik.title }}</p>
+<p>Title: {{ rolik.title2 }}</p>
+<p>Duration: {{ rolik.duration }}</p>
+<p>Date Created: {{ rolik.date_creation }}</p>
+<p>Date Modified: {{ rolik.date_modify }}</p>
+<p>Comment: {{ rolik.comment }}</p>
+<p>Active: {{ rolik.active }}</p>
+{% else %}
+<p>Not that rolik</p>
+{% endif %}

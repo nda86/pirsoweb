@@ -16,6 +16,14 @@ def roliks(request):
 	}
 	return render(request, "rekl/roliks.html", context)
 
+def rolik(request, rolik_id):
+	rolik = Rolik.objects.get(pk=rolik_id)
+	context = {
+		'rolik': rolik,
+		'title': 'Detail Rolik'
+	}
+	return render(request, "rekl/rolik.html", context)
+
 
 
 

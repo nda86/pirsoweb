@@ -1,6 +1,7 @@
 {% extends "rekl/layout.html" %}
 {% block body %}
 {% if rolik_list %}
+<div class="caption">{{ caption }}</div>
 <table class="table_roliks">
 	<tr>
 		<th>№</th>
@@ -13,7 +14,7 @@
 	</tr>
 {% for r in rolik_list %}
 	<tr class="{% cycle 'even' 'odd' %}">
-		<td>{{ forloop.counter }}</td>
+		<td><a href="{% url 'rolik' r.id %}">{{ forloop.counter }}</a></td>
 		<td>{{ r.title }}</td>
 		<td>{{ r.title2 }}</td>
 		<td>{{ r.duration }}</td>
