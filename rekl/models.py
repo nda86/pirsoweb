@@ -6,6 +6,9 @@ class Rolik(models.Model):
 	title = models.CharField(max_length=20, unique=True)
 	title2 = models.CharField(max_length=40, unique=True)
 	duration = models.IntegerField()
+	active = models.BooleanField(default=True)
 	date_creation = models.DateTimeField(auto_now_add=True, editable=False)
 	date_modify = models.DateTimeField(auto_now=True, editable=False)
+	def __str__(self):
+		return str(self.title + ' - ' + self.title2)
 

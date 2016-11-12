@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>{{ title }} - pirsoweb</title>
+	{% load static %}
+	<link rel="stylesheet" href="{% static "main.css" %}">
+</head>
+<body>
+{% include "rekl/nav.html" %}
+{% block body %}{% endblock %}
+{% include "rekl/footer.html" %}
+</body>
+</html>

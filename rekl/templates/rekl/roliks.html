@@ -1,0 +1,29 @@
+{% extends "rekl/layout.html" %}
+{% block body %}
+{% if rolik_list %}
+<table class="table_roliks">
+	<tr>
+		<th>№</th>
+		<th>Name</th>
+		<th>Title</th>
+		<th>Duration</th>
+		<th>ACTIVE</th>
+		<th>Date created</th>
+		<th>Date modified</th>
+	</tr>
+{% for r in rolik_list %}
+	<tr class="{% cycle 'even' 'odd' %}">
+		<td>{{ forloop.counter }}</td>
+		<td>{{ r.title }}</td>
+		<td>{{ r.title2 }}</td>
+		<td>{{ r.duration }}</td>
+		<td>{{ r.active }}</td>
+		<td>{{ r.date_creation }}</td>
+		<td>{{ r.date_modify }}</td>
+	</tr>
+{% endfor %}
+</table>
+{% else %}
+<p>No Roliks here</p>
+{% endif %}
+{% endblock %}
