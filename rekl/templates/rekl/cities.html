@@ -1,0 +1,18 @@
+{% extends "rekl/layout.html" %}
+{% block body %}
+{% if city_list %}
+
+{% for c in city_list %}
+<div class="city">
+	<div class="city_head">{{ c.name }}</div>
+	<ul class="city_nav">
+		<li class="city_nav_roliks"><a href="{% url 'roliks' c.id %}">Ролики</a></li>
+		<li class="city_nav_objects"><a href="{% url 'objects' c.id %}">Объекты</a></li>
+	</ul>	
+</div>
+{% endfor %}
+</ul>
+{% else %}
+<p>No Cities here</p>
+{% endif %}
+{% endblock %}

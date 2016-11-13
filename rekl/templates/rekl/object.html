@@ -1,0 +1,15 @@
+{% if object %}
+<p>Address: {{ object.pi_address }}</p>
+<p>ID: {{ object.pi_id }}</p>
+<p>IP: {{ object.pi_ip }}</p>
+<p>ALSA: {{ object.pi_alsa }}</p>
+<p>MPC: {{ object.pi_mpc }}</p>
+<p>MPG: {{ object.pi_mpg }}</p>
+<p>Comment: {{ object.pi_comment }}</p>
+<p>Active: {{ object.active }}</p>
+<p>Phone: {{ object.pi_tel }}</p>
+<p>Date Created: {{ object.date_creation }}</p>
+<p>Date Modified: {{ object.date_modify }}</p>
+{% else %}
+<p>Not that object</p>
+{% endif %}
