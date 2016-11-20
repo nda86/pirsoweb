@@ -21,7 +21,7 @@ class Rolik(models.Model):
 		return str(self.title + ' - ' + self.title2)
 
 class Object(models.Model):
-	pi_address = models.CharField(max_length=100, unique=True)
+	pi_address = models.CharField(max_length=100, unique=True, default="-")
 	pi_id = models.CharField(max_length=10, unique=True)
 	pi_ip = models.GenericIPAddressField(protocol='IPv4', default='0.0.0.0')
 	pi_alsa = models.IntegerField(default=0)
@@ -35,5 +35,6 @@ class Object(models.Model):
 	date_modify = models.DateTimeField(auto_now=True, editable=False)
 	date_creation = models.DateTimeField(auto_now_add=True, editable=False)
 	def __str__(self):
-		address = u' '.join(self.pi_address).encode('utf-8').strip()
-		return str(self.pi_id + ' - ' + self.pi_ip + ' - ' + address)
+		address = u''.join(self.pi_address).encode('utf-8').strip()
+		city = str(self.city)
+		return str(self.pi_id + ' - ' + self.pi_ip + ' - ' + city + ' - ' + address)

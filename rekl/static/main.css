@@ -74,7 +74,7 @@ html, body {
 
 .welcome{
 	height: 150px;
-	width: 100%;
+	width: 85%;
 	font-size: 150px;
 	line-height: 150px;
 	color: #fff;
@@ -82,14 +82,19 @@ html, body {
 	font-weight: 700;
 	text-transform: uppercase;
 	text-align: center;
+	margin: 5% auto;
+	border-radius: 10px;
 }
 
+
+/*TABLE ROLICKS OBJECTS*/
 .table_roliks,
 .table_objects
 {
-	width: 100%;
+	width: 95%;
 	border: 1px solid #000;
 	border-collapse: collapse;
+	margin: 0 auto;
 }
 
 .table_roliks th,
@@ -111,6 +116,9 @@ html, body {
 	background: #ddd;
 }
 
+
+
+/* CITY*/
 .city{
 	width: 50%;
 	margin: 50px auto;
@@ -140,6 +148,8 @@ html, body {
 	/*background: #20A29E;*/
 	border: 1px solid #000;
 	border-radius: 7px;
+	font-size: 15px;
+	margin: 2px auto;
 
 }
 
@@ -149,10 +159,10 @@ html, body {
 }
 
 .caption{
-	height: 30px;
+	height: 33px;
 	background: #06470F;
 	color: #fff;
-	line-height: 30px;
+	line-height: 33px;
 	text-align: center;
 	/*padding: 5px;*/
 	margin-bottom: 10px;

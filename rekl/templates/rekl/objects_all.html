@@ -1,0 +1,34 @@
+{% extends "rekl/layout.html" %}
+{% block body %}
+{% if objects %}
+<div class="caption">Objects</div>
+<table class="table_objects">
+	<tr>
+		<th>№</th>
+		<th>City</th>
+		<th>Address</th>
+		<th>ID</th>
+		<th>IP</th>
+		<th>ALSA</th>
+		<th>MPC</th>
+		<th>MPG</th>
+		<th>Телефон</th>
+	</tr>
+{% for o in objects %}
+	<tr class="{% cycle 'even' 'odd' %}">
+		<td><a href="{% url 'object' o.id %}">{{ forloop.counter }}</a></td>
+		<td>{{ o.city }}</td>
+		<td>{{ o.pi_address }}</td>
+		<td>{{ o.pi_id }}</td>
+		<td>{{ o.pi_ip }}</td>
+		<td>{{ o.pi_alsa }}</td>
+		<td>{{ o.pi_mpc }}</td>
+		<td>{{ o.pi_mpg }}</td>
+		<td>{{ o.pi_tel }}</td>
+	</tr>
+{% endfor %}
+</table>
+{% else %}
+<p>No Objects here</p>
+{% endif %}
+{% endblock %}

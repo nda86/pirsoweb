@@ -1,0 +1,30 @@
+{% extends "rekl/layout.html" %}
+{% block body %}
+{% if roliks %}
+<div class="caption">Roliks</div>
+<table class="table_roliks">
+	<tr>
+		<th>№</th>
+		<th>Name</th>
+		<th>Title</th>
+		<th>Duration</th>
+		<th>ACTIVE</th>
+		<th>Date created</th>
+		<th>Date modified</th>
+	</tr>
+{% for r in roliks %}
+	<tr class="{% cycle 'even' 'odd' %}">
+		<td><a href="{% url 'rolik' r.id %}">{{ forloop.counter }}</a></td>
+		<td>{{ r.title }}</td>
+		<td>{{ r.title2 }}</td>
+		<td>{{ r.duration }}</td>
+		<td>{{ r.active }}</td>
+		<td>{{ r.date_creation }}</td>
+		<td>{{ r.date_modify }}</td>
+	</tr>
+{% endfor %}
+</table>
+{% else %}
+<p>No Roliks here</p>
+{% endif %}
+{% endblock %}

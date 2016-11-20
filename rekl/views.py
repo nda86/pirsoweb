@@ -44,7 +44,7 @@ def rolik(request, rolik_id):
 
 
 
-# objects################################################################
+# objects by gorod#######################################################
 def objects(request, city_id):
 	object_list = Object.objects.filter(city_id=city_id)
 	context = {
@@ -63,9 +63,23 @@ def object(request, object_id):
 	}
 	return render(request, "rekl/object.html", context)
 
-#########################################################################
+##########################################################################
 
 
 
+# objects_all#############################################################
+def objects_all(request):
+	objects_all = Object.objects.all()
+	context = {'objects':objects_all}
+	return render(request, "rekl/objects_all.html", context)
+##########################################################################
+
+
+# roliks_all##############################################################
+def roliks_all(request):
+	roliks_all = Rolik.objects.all()
+	context = {'roliks':roliks_all}
+	return render(request, "rekl/roliks_all.html", context)
+##########################################################################
 
 
