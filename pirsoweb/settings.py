@@ -31,6 +31,7 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    'gunicorn',
     'rekl.apps.ReklConfig',
     'django.contrib.admin',
     'django.contrib.auth',
